@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./Kinder-School/KinderSchoolDemoSketch.ttf">
+    <title>School</title>
+    <style>
+        @font-face {
+            font-family: face;
+            src: url(./Kinder-School/KinderSchoolDemoSketch.ttf);
+        }
+
+        .face {
+            font-family: face;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        class="container mx-auto  sm:pt-32 pt-16 text-white h-screen  bg-[url('./images/blue-smooth-wall-textured-background.jpg')] bg-cover">
+        
+        <div class=" py-24 bg-[url('./images/bg-img.jpg')]  bg-cover ">
+
+            <div class=" ">
+                <h1 class="face justify-around flex sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-xl" >Welcome to the School Manage System </h1>
+                <h2 class="face flex justify-around  my-12 sm:text-l md:text-xl lg:text-3xl text-md">Log Into Account To Manage Student Records</h2>
+            </div>
+
+            <form id="myForm" class="grid place-items-center">
+                <h1 class="text-5xl my-4 face">Login</h1>
+                <input type="text" name="username" id="userName" placeholder="Username" required
+                    class="my-3 rounded-md pl-3 h-12 bg-transparent border-solid border outline-0 border-green-300  sm:w-5/6 md:w-2/4 lg:w-1/4 w-3/5 placeholder:text-white  ">
+                <input type="password" name="password" id="passWord" placeholder="Password" required
+                    class="my-3 rounded-md pl-3 h-12 bg-transparent border-solid border outline-0 border-green-300  sm:w-5/6 md:w-2/4 lg:w-1/4 w-3/5 placeholder:text-white ">
+                <button type="submit"
+                    class="border border-solid border-green-200 text-xl mt-5 py-4 rounded-md hover:bg-green-500 hover:font-bold sm:w-5/6 md:w-2/4 lg:w-1/4 w-3/5">Log
+                    In</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form id="myForm">
+
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required>
+        <button type="submit">Submit</button>
+
+    </form>
+    <br>
+    <input type="text" id="print">
+    <button onclick="push()">Single Data</button>
+    <button onclick="print()">Print All Data</button>
+    <button onclick="Delete()">Delete Data</button>
+    <button onclick="update()">update Data</button>
+    <p id="p"></p> -->
+    <script>
+
+        const myForm = document.getElementById('myForm');
+
+        myForm.addEventListener('submit',(event)=>{
+            event.preventDefault()
+            const userName = document.getElementById('userName').value;
+            const passWord = document.getElementById('passWord').value;
+
+            if(userName=="school" && passWord=="12345678")
+            {
+                window.location.href = "./Record.html";
+            }
+            else{
+                alert("Username or Password is incorrect");
+                myForm.reset();
+            }
+        });
+
+    </script>
+</body>
+
+
+</html>
